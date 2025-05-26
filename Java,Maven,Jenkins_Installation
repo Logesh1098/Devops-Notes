@@ -5,6 +5,9 @@ set -e
 echo "Updating system packages..."
 sudo yum update -y
 
+#Install Git
+sudo yum install git -y
+
 # Install Java (Amazon Corretto 17)
 echo "Installing Java (Corretto 17)..."
 sudo yum install -y java-17-amazon-corretto-devel
