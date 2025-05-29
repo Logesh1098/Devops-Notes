@@ -1,0 +1,51 @@
+Pipeline - Stage 1 & Stage 2 & Stage 3
+--------------------------------------------------
+Note: Before writing stage 3, run the below commands in MobaXTerm
+sudo visudo
+
+Note: #Add the following line at the end of the file, assuming the Jenkins user as 'jenkins'
+jenkins ALL=(ALL) NOPASSWD: /bin/cp
+
+
+pipeline {
+    agent any
+
+    tools {
+        maven 'maven3'
+    }
+
+    stages {
+        stage('Clone the Code') {
+            steps {
+                git 'https://github.com/KastroVKiran/Netflix-Pipeline-Project.git'
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                script {
+                    def mavenHome = tool name: 'maven3', type: 'maven'
+                    def mavenCMD = "${mavenHome}/bin/mvn"
+                    // Run Maven build with parallel execution and skip tests if needed
+                    sh "${mavenCMD} clean package -T 1C -DskipTests"
+                }
+            }
+        }
+        stage('Deploy Stage') {
+            steps {
+                script {
+                    // Ensure target directory exists before copying
+                    sh 'ls -l target'
+                    // Deploy the WAR file to Tomcat
+                    sh 'sudo cp target/NETFLIX-1.2.2.war /home/ec2-user/apache-tomcat-9.0.105/webapps'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up after build...'
+            cleanWs() // Clean workspace after build
+        }
+    }
+}
