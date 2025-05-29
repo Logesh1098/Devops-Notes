@@ -1,0 +1,75 @@
+#Step1
+
+# This are command to install Docker in the ubuntu machine 
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+#step2
+  
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+
+#step3
+
+# To install the latest  version of Docker 
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+#step4
+  
+# Running the sonatype images in to docker 
+  docker run -d --name nexus3 8081:8081 sonatype/nexus3
+
+
+Step5
+
+# To get the password for the nexus , we have go into the docker container 
+  # Cmd to get in to docker container 
+  docker ps
+# once you enter into the container type this cmd and in the containerid , id will be available inside the container 
+docker exec -it <containerid> /bin/bash
+# Then 
+  cd sonatype-work
+# Then
+  ls
+#Then 
+  nexus3--->ls----> admin.password file -->coppt the password (dont copy the bash-4.4$)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+  
+# In order to work with Sonatype nexus we have to install some plugins in the Jenkins 
+#plugins 
+* config  File provider
+* Maven Integration
+* Eclipse Temurin Installer   # (It will help us to jump from one version of java to other verson of java )
+* Pipeline maven integration
+* Pipeline stage View 
+
+# Also we have confgure the Tools in Jenkns 
+* JDK & Maven 
+
+
+#This we have to set up in the pom.xml file which will be present in the Nexus repository 
+  
+ <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>Nexus Url </url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>NexusURL/repository/maven-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
