@@ -16,3 +16,17 @@ sudo apt install jenkins -y
 
 # Start and enable Jenkins
 sudo systemctl enable --now jenkins
+
+------------------------------------------------------------------------------------
+
+# To change the Port no of jenkins 
+cd /usr/lib/systemd/system
+ls-->Jenkins.sevice
+vi jenkins.service -->Environment =Jenkins_port=8080
+# Once you have change the port no , Restart the jenkins 
+sudo systemctl restart jenkins 
+
+-------------------------------------------------------------------------------------
+#jenkins pipeline plugins
+  * Blur ocean (to see the stage wise execusion )
+  * Pipeline stage view (to see the stage wise execusion)
