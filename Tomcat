@@ -1,0 +1,7 @@
+ # setting up the user name and password iinside the tomcat-users.xml file which will be present inside the apache-->conf-->tomcat-users.xml
+
+  <role rolename="manager-gui" />
+  <user username="tomcat" password="tomcat" roles="manager-gui" />
+  <role rolename="admin-gui" />
+  <role rolename="manager-script" />
+  <user username="admin" password="admin" roles="manager-gui,admin-gui,manager-script"/>
