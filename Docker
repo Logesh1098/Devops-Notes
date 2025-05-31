@@ -10,7 +10,7 @@ docker -y
 #to see the docker images 
 docker images
 
-#To see the docker container which are i running stage 
+#To see the docker container which are in running stage 
 docker ps 
 
 # To see running containers and stopped containers 
@@ -21,5 +21,29 @@ docker pull <imagename>
 
 #Also we can check in EC2 instance using the command 
 docker search <imagename>
+===================================================================================================================================
+
+#To create the container inside the docker
+#Method 1
+docker run -it --name <containername> <Imagename or ImageID>
+(-it represent the Interative Mode )
+
+
+
+
+
+
+
+#To come out of the container 
+1. ctrl+p+q  (To come of the coonntainer in the safe mode )
+2. ctrl+d (It will kill the things inside the container , it is notrecommended )
+
+# To Stop the Container 
+docker stop <ContainerName or Container ID >
+
+#To Start the Conainer 
+docker start <containerNAme or ContainerID>
+
+
 
 
