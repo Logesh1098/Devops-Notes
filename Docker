@@ -71,8 +71,8 @@ docker stop <ContainerName or Container ID >
 -------------------------------
 docker start <containerNAme or ContainerID>
 
-#To  KILL the Container
-----------------------------------
+#To  KILL the Container (if you think that you dont want the container you can use the Kill )
+------------------------------------------------------------------------------------------------
 docker kill <containername or containerid >
 
 #To restart the Kiled Container 
@@ -80,6 +80,23 @@ docker kill <containername or containerid >
 docker ps -a 
 (you will the killed container in Exited State copy the container id and agai you can restart the container)
 docker start <containerid>
+
+# To restart the Container 
+------------------------------
+docker restsart <containername>
+
+# To Pause the container 
+------------------------------
+docker pause <containername>
+
+# To unpause the Container 
+-------------------------------
+docker unpause <containername>
+
+#To Get the detailed information of the container 
+--------------------------------------------------
+docker inspect <coontainername >
+
 
 
 
