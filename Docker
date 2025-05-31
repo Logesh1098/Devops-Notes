@@ -1,0 +1,25 @@
+# To Install the docker 
+sudo yum install docker -y
+
+# Then we have start docker 
+systemctl start docker 
+
+# to see the docker version 
+docker -y
+
+#to see the docker images 
+docker images
+
+#To see the docker container which are i running stage 
+docker ps 
+
+# To see running containers and stopped containers 
+docker ps -a 
+
+# To pull the image from docker to EC2 iinstance 
+docker pull <imagename>
+
+#Also we can check in EC2 instance using the command 
+docker search <imagename>
+
+
