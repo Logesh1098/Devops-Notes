@@ -1,7 +1,5 @@
 * once you enter the conainer we have to update the container 
 
-
-
 # To Install the docker 
 --------------------------
 sudo yum install docker -y
@@ -96,6 +94,12 @@ docker unpause <containername>
 #To Get the detailed information of the container 
 --------------------------------------------------
 docker inspect <coontainername >
+
+#To remove the container
+------------------------------
+docker rm <containername>
+docker rm -f <containername>  (forcefully remove the container even the coontainer is running )
+************(once you remove the container you can again retrive the container )*******************
 
 
 
