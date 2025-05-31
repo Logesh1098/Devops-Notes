@@ -44,6 +44,36 @@ docker stop <ContainerName or Container ID >
 #To Start the Conainer 
 docker start <containerNAme or ContainerID>
 
+#To  KILL the Container
+docker kill <containername or containerid >
+
+#To restart the Kiled Container 
+docker ps -a 
+(you will the killed container in Exited State copy the container id and agai you can restart the container)
+docker start <containerid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
