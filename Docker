@@ -101,6 +101,18 @@ docker rm <containername>
 docker rm -f <containername>  (forcefully remove the container even the coontainer is running )
 ************(once you remove the container you can again retrive the container )*******************
 
+# To remove the image 
+--------------------------
+docker rmi <imagename or image id >
+
+# To see the logs of the contaiiner 
+-----------------------------------------
+docker logs <containername>
+
+# To see how much CPU or Memory utilized by container 
+---------------------------------------------------------
+docker stats
+
 
 
 
