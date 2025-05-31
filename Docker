@@ -113,6 +113,10 @@ docker logs <containername>
 ---------------------------------------------------------
 docker stats
 
+#To create the custom image 
+-------------------------------------------
+docker commit
+
 
 
 
