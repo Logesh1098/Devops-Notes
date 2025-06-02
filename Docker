@@ -115,7 +115,8 @@ docker stats
 
 #To create the custom image 
 -------------------------------------------
-docker commit
+docker commit <containername > <your new image name >
+
 
 
 
