@@ -150,6 +150,11 @@ docker image -q (it  will list all the images )
 docker rmi -f $(docker images -q )
 (-f ) ==> forcefully 
 
+# ToBuild the docker image 
+------------------------------
+docker build -t <ImageName> .
+
+
 
 Dockerfile Components
 -------------------------------------------------------------
@@ -169,6 +174,55 @@ All the components/keywords must be written in CAPITAL LETTERS
 * EXPOSE
 
 
+1. FROM
+From is used to Get the base image for our Container 
+
+2.RUN 
+* It is used to execute the command on top of base image 
+* RUN Instruction will get executed while creating the image 
+* we can right the multiple RUN 
+* all RUN will be executed from top to bottom
+* RUN is used to install any packages 
+
+3. CMD
+* It is used to excecute on top the base image 
+* IT will be executed while creating the Container 
+* We can write multiple CMD instruction But docker will only execute only the last CMD instruction .
+
+4. COPY
+* It isused to copy the file or folder to the docker image 
+* It is used to copy the file from the one location to the other location 
+* It is also used to copy the file from EC2 to Dockerfile 
+
+COPY < SourceLocation> <Destination Location >
+
+5. ADD 
+* It is used to aad the file which is available on internet to the container 
+* ADD command also used to download the filefrom internet 
+* ADD keyword will extarct the tar file while copying the image .
+
+6. WORKDIR
+*  using this directory we can set the working directort of the image/container 
+* It will help us to go inside the specified directory 
+
+7. LABEL
+* It isused to assgn the meta data for our image 
+* LABELS are represent in the form of key:value pairs 
+* Using lable we can Give the author name to the image
+
+#To find the Author name 
+----------------------------
+docker inspect <containername> | grep -i <authorname>
+(-i is for case sensitivity if not required you can remove the -i >
+
+8. ENV
+* It is used to set the environment varaible 
+* ENV variable wil run inside the container 
+* Here also we will go with the Key:Value pairs 
+
+
+9. EXPOSE 
+* It is used to expose our application on a specific port number 
 
 
 
