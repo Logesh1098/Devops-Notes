@@ -117,6 +117,42 @@ docker stats
 -------------------------------------------
 docker commit <containername > <your new image name >
 
+==============================================================================================================
+
+# Commands to copy the file from EC2 instance to the container 
+---------------------------------------------------------------
+docker cp <filename> <containername >
+if you want to copy to the specific path then we can give the path in the container 
+<container: path >
+
+# To Rename the Container 
+---------------------------
+docker  rename <containername> <The name you have to Modify>
+Note : In case the rename is  not working , Stop the container and then try to rename it.
+
+# To Login into the dockerHub
+-------------------------------
+docker login -u <yourDockerAccountname>
+(onceyou Hit Enter it will ask for the dockerhub password )
+
+# To remove the Unused image and Container 
+---------------------------------------------
+docker system prune -a 
+
+# The Container is in running state however we have to remove 
+-----------------------------------------------------------------
+docker ps -aq (it will list all the container id )
+docker kill $(docker ps -aq)
+docker rm $(docker ps -aq)
+# Similary to remove the docker image 
+-------------------------------------
+docker image -q (it  will list all the images )
+docker rmi -f $(docker images -q )
+(-f ) ==> forcefully 
+
+
+
+
 
 
 
