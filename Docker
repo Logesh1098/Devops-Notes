@@ -151,6 +151,22 @@ docker rmi -f $(docker images -q )
 (-f ) ==> forcefully 
 
 
+Dockerfile Components
+-------------------------------------------------------------
+We can also call as KEYWORDS
+All the components/keywords must be written in CAPITAL LETTERS
+
+* FROM
+* RUN
+* CMD
+* ENTRYPOINT
+* COPY
+* ADD
+* WORKDIR
+* LABEL
+* ENV
+* ARGS
+* EXPOSE
 
 
 
