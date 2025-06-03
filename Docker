@@ -270,6 +270,7 @@ Syntax : MAINTAINER <Authorname>  <AuthorEmail>
 * ARGS will be passed on the containers 
 
 
+========================================================================================================================
 DOCKER VOLUME
 -------------------
 * Volume Indicates storage 
@@ -298,6 +299,30 @@ go inside of it you will find the lengthy file ---> cd ----> _data ----> ls --->
 
 Method 2 --
 ------------------
+To Get the volume from one container to another container 
+docker run -it --name <newcontainername> --volumes-from  <exixtingcontainer> <Baseimage>
+
+Method 3
+------------
+# Creating volume using commands 
+docker run -it --name <containername> -v <volumename> <baseimage>
+
+Method 4 
+-----------
+# Creating the volume in the host machine (EC2 instance )
+Cmd to create volume the host
+
+docker volume create <volumename>
+
+docker run -it --name <containername> --mount source=<hostvolumename> , destination= <volumename> <baseimage>
+
+# CMD : lsblk 
+It will show the volume which is in your EC2 instance 
+
+Mount is pending need to check  .
+
+
+
 
 
 
