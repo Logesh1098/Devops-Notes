@@ -270,6 +270,39 @@ Syntax : MAINTAINER <Authorname>  <AuthorEmail>
 * ARGS will be passed on the containers 
 
 
+DOCKER VOLUME
+-------------------
+* Volume Indicates storage 
+* It is just a folder , inside the container 
+* docker volume is to store the data of the docker containers 
+* Aslo called as persistence volume 
+*  we can share the docker volume from one container to the another container 
+* One volume can be attached to a multiple container but , at a time we can attach to one volume to one container 
+* We can create more than one volume to container 
+* The data inside the volume will stored in local machine which is your instance 
+
+Method  1 --Creating volume usiong Dockerfile 
+-----------------------------------------------
+vi Dockerfile 
+FROM ubuntu
+VOLUME ["volume 1"]
+
+The Volume you have created will be stored in the EC2 instance also , to check that come out of the container and 
+* cd /var/lib/docker/
+do ls --> you will find the volume inside the file 
+go inside of it you will find the lengthy file ---> cd ----> _data ----> ls ---> All your  file will be there 
+
+* To see the volumes in the 
+------------ docker volume ls --------------
+
+
+Method 2 --
+------------------
+
+
+
+
+
 
 
 
