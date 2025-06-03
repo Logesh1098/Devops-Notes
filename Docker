@@ -222,7 +222,33 @@ docker inspect <containername> | grep -i <authorname>
 
 
 9. EXPOSE 
+----------
 * It is used to expose our application on a specific port number 
+
+Lets say i have a GitHub repo, which has a sample html file. Now we need to write a Dockerfile to install apache webserver (to host the html page)
+
+vi Dockerfile
+FROM ubuntu
+RUN apt update -y
+RUN apt install apache2 -y
+RUN apt install apache2-utils -y
+RUN apt clean
+COPY ECR-ECS-Project/ /var/www/html/
+RUN service apache2 restart
+EXPOSE 80
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
+
+
+
+
+# Port Mapping
+--------------
+docker run -itd -name <containername> -p 3000:4000 <imagenae>
+3000- It is the Host Port 
+4000-It is a container port 
+* You cannot run the application in same port port no .
+
+
 
 
 
