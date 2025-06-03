@@ -249,6 +249,27 @@ docker run -itd -name <containername> -p 3000:4000 <imagenae>
 * You cannot run the application in same port port no .
 
 
+10. ENTRYPOINT
+----------------
+This will be executed while the container get created .
+
+11. VOLUME
+----------
+* It is used to store the data 
+* Docker Volume 
+
+12 . MAINTAINER
+---------------
+* It represent the who is maintaining the Dockerfile 
+Syntax : MAINTAINER <Authorname>  <AuthorEmail>
+
+13. ARGS(In real time we dont user that much )
+------------------------------------------------
+* It is used to avoid the Hardcore values in the docker file 
+* These are the variable which run outside of the container 
+* ARGS will be passed on the containers 
+
+
 
 
 
