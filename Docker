@@ -316,10 +316,24 @@ docker volume create <volumename>
 
 docker run -it --name <containername> --mount source=<hostvolumename> , destination= <volumename> <baseimage>
 
+
+Create the volume in the EC2 instance 
+
 # CMD : lsblk 
 It will show the volume which is in your EC2 instance 
 
-Mount is pending need to check  .
+To Create the file system 
+-------------------------------
+sudo mkfs  -t <tagname> /dev/xvdb 
+sudo mkdir /mnt/<directoryname>
+Now we gonna mount the directory 
+sudo mount /dev/xvdb/ mnt/<directoryname>
+df -h
+you should see the volume 
+Create the container using this ebs volume 
+docker run -t --name <containername> -v /mnt/ebs-volume: /<volumename> <imagename>
+
+ 
 
 
 
