@@ -1,1 +1,22 @@
+Docker 
+----------
+Docker is a containerization platform that provide the ability to Package and run  an application in the loosely isolated Environment .
+Iis is PaaS as service 
+(PaaS)--> Platform as a service 
+Docker is used to create a container , where we will run the application 
+
+Advantages  of Docker 
+-----------------------
+Portibiality and consistance 
+Runs anywhere 
+Faster Development and Deployment
+Pre packaged Environment
+Smilified updates and scaling 
+Lightweight and efficient
+Isolated Environment
+Improves Collabs and versio control 
+Version control for the application 
+
+
+
 
