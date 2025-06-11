@@ -4,8 +4,8 @@
 --------------------------
 sudo yum install docker -y
 
-# Then we have start docker 
--------------------------------
+# once we install the docker we have to start the docker , Because it is a service . 
+------------------------------------------------------------------------------------
 systemctl start docker 
 
 # to see the docker version 
