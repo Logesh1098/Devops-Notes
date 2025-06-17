@@ -135,10 +135,16 @@ if you want to copy to the specific path then we can give the path in the contai
 docker  rename <containername> <The name you have to Modify>
 Note : In case the rename is  not working , Stop the container and then try to rename it.
 
+
+----------DOCKER LOGIN--------------------------------
+
+
 # To Login into the dockerHub
 -------------------------------
 docker login -u <yourDockerAccountname>
 (onceyou Hit Enter it will ask for the dockerhub password )
+Once  you login it will show login succeded .
+
 
 # To remove the Unused image and Container 
 ---------------------------------------------
@@ -149,6 +155,7 @@ docker system prune -a
 docker ps -aq (it will list all the container id )
 docker kill $(docker ps -aq)
 docker rm $(docker ps -aq)
+
 # Similary to remove the docker image 
 -------------------------------------
 docker image -q (it  will list all the images )
