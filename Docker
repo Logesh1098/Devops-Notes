@@ -128,7 +128,7 @@ docker top <containername>
 ---------------------------------------------------------------
 docker cp <filename> <containername >
 if you want to copy to the specific path then we can give the path in the container 
-<container: path >
+<container: path /tmp >
 
 # To Rename the Container 
 ---------------------------
