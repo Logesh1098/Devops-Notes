@@ -251,7 +251,7 @@ COPY ECR-ECS-Project/ /var/www/html/
 RUN service apache2 restart
 EXPOSE 80
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
-
+(Default path to run the application in foreground)
 
 
 
