@@ -260,6 +260,7 @@ CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 docker run -itd -name <containername> -p 3000:4000 <imagenae>
 3000- It is the Host Port 
 4000-It is a container port 
+Hostport:Containerport
 * You cannot run the application in same port port no .
 
 
