@@ -348,7 +348,9 @@ you should see the volume
 Create the container using this ebs volume 
 docker run -t --name <containername> -v /mnt/ebs-volume: /<volumename> <imagename>
 
- 
+---To Uunmount the volume from the docker ---------
+use df -h you will get the path so use that to unmount the volume 
+sudo umount /dev/xvdb  
 
 
 
