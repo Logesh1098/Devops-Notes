@@ -247,6 +247,7 @@ RUN apt update -y
 RUN apt install apache2 -y
 RUN apt install apache2-utils -y
 RUN apt clean
+RUN git clone <Giturl>
 COPY ECR-ECS-Project/ /var/www/html/
 RUN service apache2 restart
 EXPOSE 80
@@ -352,7 +353,8 @@ docker run -t --name <containername> -v /mnt/ebs-volume: /<volumename> <imagenam
 use df -h you will get the path so use that to unmount the volume 
 sudo umount /dev/xvdb  
 
-
+* limiting the memory utilization of the container 
+docker stats <containername>
 
 
 
