@@ -356,6 +356,14 @@ sudo umount /dev/xvdb
 * limiting the memory utilization of the container 
 docker stats <containername>
 
+docker run -it --name <containername> --cpus='0.1' --memory='200MB' ubuntu 
+* To update the CPUS and MEMORY
+docker update <containername> --cpus='0.5' --memory='500MB' 
+
+
+-------------Docker Compose --------------------
+* To automate the process of creating the multiple container we will use the docker compose 
+
 
 
 
