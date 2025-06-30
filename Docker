@@ -362,7 +362,14 @@ docker update <containername> --cpus='0.5' --memory='500MB'
 
 
 -------------Docker Compose --------------------
+
 * To automate the process of creating the multiple container we will use the docker compose 
+* Docker compose is a tool that allows you to define and run the multi-container based application 
+* Here we write the YAML file for the docker compose deployment
+Name : docker-compose.yml or docker-compose.yaml 
+YAML -Yet another Markup language 
+We can create/start/stop/restart/delete all the container at a time 
+Docker compose will work on single Host
 
 
 
