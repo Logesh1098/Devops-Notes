@@ -413,6 +413,11 @@ services:
 
 
 
+-------------Docker Compose and Ngnix---------
+Ngnix can work as the load balance also work as web-server and reverse proxy
+Ngnix Volume :
+ - ./ngnix.conf:/etc/ngnix/conf.d/default.conf
+
 
 
 
