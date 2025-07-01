@@ -371,6 +371,22 @@ YAML -Yet another Markup language
 We can create/start/stop/restart/delete all the container at a time 
 Docker compose will work on single Host
 
+----Docker Compose Installation----
+************
+
+mkdir -p ~/.docker/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+docker compose version
+----------------------------------
+
+* To run the docker-compose.yml file 
+docker-compose up -d 
+docker-compose ps (to see all the docker-compose container)
+
+
+
+
 
 
 
