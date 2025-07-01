@@ -384,6 +384,29 @@ docker compose version
 docker-compose up -d 
 docker-compose ps (to see all the docker-compose container)
 
+---Docker compose file --------
+Any docker compose file will start with the version
+
+version:'2.27'
+services:
+   cartservice:
+       image:<imagename>:<tag>     (if you have image inside the docker hub before the image name we have mention the dokcerhub name EX:cartservice:logesh/<imagename>
+       ports:
+        - 80:80          (Hostportnumber:containerportnumber)
+   productservice:
+      image :<imagename>:<tag>
+      ports:
+        - 81:80
+   userservice:
+      image: <imagename>:<tag>
+      ports:
+        - 82:80
+   mainservice:
+      image: <imagename>:<tag>
+      ports:
+        - 83:80
+
+
 
 
 
