@@ -1,5 +1,10 @@
 * once you enter the conainer we have to update the container 
 
+#To connect to the Dockerhub
+------------------------------
+docker login -u <DockerhubName>
+And it will ask for the password 
+
 # To Install the docker 
 --------------------------
 sudo yum install docker -y
