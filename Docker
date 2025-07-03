@@ -419,6 +419,9 @@ Ngnix Volume :
  - ./ngnix.conf:/etc/ngnix/conf.d/default.conf
 
 
+------------------------
+# Creating the image into the dockerHub
+dicker build -t <dockerhubname>/imagename .
 
 
 
