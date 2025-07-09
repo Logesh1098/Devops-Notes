@@ -424,6 +424,12 @@ Ngnix Volume :
 dicker build -t <dockerhubname>/imagename .
 
 
+#comand to add the jenkins to the docker group
+==============================================
+sudo usermod -aG docker jenkins
+
+
+
 
 
 
