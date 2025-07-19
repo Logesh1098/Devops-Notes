@@ -429,14 +429,55 @@ dicker build -t <dockerhubname>/imagename .
 sudo usermod -aG docker jenkins
 
 
+To Initilize the docker swarm 
+==================================
+docker swarm init
+                   ** once we initiliaze we will get the tocken using the tocken we can join the worker node with the main node ***
+             In Main node we have execute the command 
+  docker node ls  (so all the worker node will be visible in the main node )
+
+
+docker run -itd --name jenkins -p 8080:8080 jenkins/jenkins
 
 
 
 
 
+Docker Networks  (docker network ls )
+====================
+Docker network is used to communicate between the multiple container that are running same host machine or different host machine 
+In Docker we have 3 default network 
+
+* Bridge -- if we have 2 containers in the same host machine which need to communicate with each other ---Prefered
+(Recommended when we are using the standalone containers ,  it will assign IP for each docker containers )
+docker inspect <containername>(we can see the IP of the container )
 
 
+* Host -- if  we want the use the HOST-EC2 networking
+(Host also  used for the stand alone containers but it will ot assign the IP for the container )
 
+* None
+
+* overlay --if 2 cotainer on the diff host machine wants to communicate with each other will go with overlay (default in docker swarm )
+(overlay is used for the orchestration )
+
+Macvlan network drivers will provide the physical IP  for the container 
+
+
+for the 3 net work we have different network drivers 
+Network drivers are the one which will provide the network to the containers 
+
+docker inspect (we will see the details and IP address of the container will be available )
+
+
+docker network ls
+
+docker network  create <networkname> (By default it will create with  bridge network)
+
+docker network connect logesh container1 (connect the custom network to our container )
+apt install iputils-ping -y
+
+docker network  disconnect logesh container1 (to disconnect the network of the 2 containers )
 
 
 
