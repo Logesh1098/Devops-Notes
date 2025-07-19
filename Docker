@@ -481,6 +481,49 @@ docker network  disconnect logesh container1 (to disconnect the network of the 2
 
 
 
+Docker  Swarm --Managing Secrets 
+====================================
+A secrete is an infoemation that should hidden from the unauthorised access
+username, password ,etc 
+
+** docker secrete create logeshsecrete <filename which you want to be secrete>
+So it will create the secrete id 
+
+To see the secrete id 
+docker secrete ls 
+
+create the Contaier ->go inside the container -->all the secrete will store in the default path 
+cd /run/secrets/
+ls ---> it will shoe the secrete file name 
+
+
+Docker Portrainer
+===================================
+
+Docker portrainer is a GUI for docker
+
+First setup docker-swarm cluster
+
+Connect to all the VMs
+Setup the connections with workers
+
+In Master ---> 
+curl -L https://downloads.portainer.io/ce2-16/portainer-agent-stack.yml -o portainer-agent-stack.yml
+docker stack deploy -c portainer-agent-stack.yml portainer
+
+docker ps
+
+public-ip of swarm master:9443 
+
+https://13.233.198.125:9443 (OR)
+http://13.233.198.125:9000
+
+Setup password
+Click on refresh
+You will see "Primary: up" ----> Click on it ----> Dashboard (Leftpane) ----> You can see all the details
+We can also create containers using GUI ---> Try it by going to containers (left pane)
+
+Docker swarm has limitations which is autoscaling. And there are many other drawbacks (not suitable for huge environments, we cannot manage containers) as well. So the alternative is KUBERNETES. In order to manage the containers efficiently we will go with K8S.
 
 
 
