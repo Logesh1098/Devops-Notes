@@ -4,6 +4,7 @@ Docker is a containerization platform that provide the ability to Package and ru
 Iis is PaaS as service 
 (PaaS)--> Platform as a service 
 Docker is used to create a container , where we will run the application 
+The problem of code compatibility can sloved easily using the docker 
 
 Advantages  of Docker 
 -----------------------
@@ -17,6 +18,12 @@ Isolated Environment
 Improves Collabs and versio control 
 Version control for the application 
 
+Architecture
+==============
+Monolatic Architecture ---All will be in single server with single dataBase 
+Micro-service Architecture-- Will have Multiple service with multipe server and databases 
 
+
+ 
 
 
